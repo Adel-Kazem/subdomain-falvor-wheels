@@ -1,1 +1,1309 @@
-<!DOCTYPE html><html><head><title>falvor-wheels.revunova.net</title></head><body><h1>Welcome to falvor-wheels.revunova.net</h1><p>Site created with Laravel GitHub Pages Automation</p></body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Wheels - Gourmet Food Truck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script> tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    display: ['Bebas Neue', 'cursive'],
+                    body: ['Nunito', 'sans-serif'],
+                },
+                colors: {
+                    brand: {
+                        yellow: '#FFC62B',
+                        orange: '#FF6B35',
+                        dark: '#2E282A',
+                        light: '#F7F9F9',
+                        teal: '#17BEBB',
+                    }
+                },
+            }
+        }
+    } </script>
+    <style> body {
+        font-family: 'Nunito', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    .pattern-bg {
+        background-color: #17BEBB;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+
+    .animated-bg {
+        background: linear-gradient(-45deg, #FFC62B, #FF6B35, #17BEBB, #2E282A);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .location-pulse {
+        position: relative;
+    }
+
+    .location-pulse::before {
+        content: "";
+        position: absolute;
+        border: 1px solid #FF6B35;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        animation: pulse 1.5s ease-out infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.4;
+        }
+        100% {
+            transform: scale(1.3);
+            opacity: 0;
+        }
+    } </style>
+</head>
+<body class="bg-brand-light text-brand-dark"> <!-- SVG Sprite Definitions -->
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="icon-location" viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24">
+        <path d="M19 7c0-1.1-.9-2-2-2h-3V3H6v2H3c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h1c0 1.66 1.34 3 3 3s3-1.34 3-3h4c0 1.66 1.34 3 3 3s3-1.34 3-3h1c1.1 0 2-.9 2-2v-5l-3-4zM7 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm10 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM18 12h-2.5V9.5h-2V12H6V5h12v7z"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </symbol>
+    <symbol id="icon-bookmark" viewBox="0 0 24 24">
+        <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+    </symbol>
+</svg>
+<!-- Header & Navigation -->
+<header class="fixed w-full z-50 bg-brand-light">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <a href="#" class="flex items-center">
+                <div class="bg-brand-orange text-brand-light p-2 rounded-full mr-3">
+                    <svg class="w-7 h-7">
+                        <use href="#icon-truck"></use>
+                    </svg>
+                </div>
+                <span class="font-display text-3xl tracking-wider">FLAVOR<span class="text-brand-orange">WHEELS</span></span>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#about" class="font-bold hover:text-brand-orange transition duration-300">ABOUT</a>
+                <a href="#locations" class="font-bold hover:text-brand-orange transition duration-300">LOCATIONS</a>
+                <a href="#menu" class="font-bold hover:text-brand-orange transition duration-300">MENU</a>
+                <a href="#events" class="font-bold hover:text-brand-orange transition duration-300">EVENTS</a>
+                <a href="#contact" class="bg-brand-orange text-brand-light font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-300">CONTACT
+                    US</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="lg:hidden text-brand-dark focus:outline-none">
+                <svg class="w-8 h-8">
+                    <use href="#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-brand-dark bg-opacity-95 z-50 flex-col items-center justify-center hidden">
+    <button id="mobile-menu-close" class="absolute top-6 right-6 text-brand-light">
+        <svg class="w-8 h-8">
+            <use href="#icon-close"></use>
+        </svg>
+    </button>
+
+    <nav class="flex flex-col items-center space-y-6">
+        <a href="#about" class="font-display text-brand-light text-3xl hover:text-brand-orange transition duration-300">ABOUT</a>
+        <a href="#locations" class="font-display text-brand-light text-3xl hover:text-brand-orange transition duration-300">LOCATIONS</a>
+        <a href="#menu" class="font-display text-brand-light text-3xl hover:text-brand-orange transition duration-300">MENU</a>
+        <a href="#events" class="font-display text-brand-light text-3xl hover:text-brand-orange transition duration-300">EVENTS</a>
+        <a href="#contact" class="bg-brand-orange text-brand-light font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition duration-300 mt-4">CONTACT
+            US</a>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-20 md:py-32 animated-bg">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-brand-light mb-12 md:mb-0">
+                <h1 class="font-display text-5xl md:text-7xl mb-4">STREET FOOD <br>REVOLUTION</h1>
+                <div class="w-20 h-2 bg-brand-yellow mb-6"></div>
+                <p class="text-xl mb-8 max-w-lg">Experience gourmet cuisine on wheels as we bring our innovative menu to
+                    different locations throughout the city.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#locations" class="bg-brand-yellow text-brand-dark font-bold px-8 py-4 rounded-lg flex items-center hover:bg-opacity-90 transition duration-300">
+                        <svg class="w-5 h-5 mr-2">
+                            <use href="#icon-location"></use>
+                        </svg>
+                        FIND US TODAY
+                    </a>
+                    <a href="#menu" class="bg-transparent border-2 border-brand-light text-brand-light font-bold px-8 py-4 rounded-lg flex items-center hover:bg-brand-light hover:text-brand-dark transition duration-300">
+                        <svg class="w-5 h-5 mr-2">
+                            <use href="#icon-bookmark"></use>
+                        </svg>
+                        SEE THE MENU
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative rounded-tl-3xl rounded-br-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Food Truck Experience" class="w-full h-96 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-40"></div>
+                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                        <div>
+                            <span class="bg-brand-yellow text-brand-dark font-bold px-4 py-1 rounded-full text-sm inline-block mb-2">TODAY'S SPECIAL</span>
+                            <h3 class="text-white text-2xl font-bold">Korean BBQ Fusion Tacos</h3>
+                        </div>
+                        <div class="bg-brand-orange text-brand-light p-3 rounded-lg font-bold">
+                            $9.50
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -top-8 -right-8 bg-brand-teal w-24 h-24 rounded-full z-0 hidden md:block"></div>
+                <div class="absolute -bottom-8 -left-8 bg-brand-yellow w-16 h-16 rounded-full z-0 hidden md:block"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Food preparation" class="rounded-tl-3xl rounded-br-3xl shadow-lg h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chef in action" class="rounded-tr-3xl rounded-bl-3xl shadow-lg h-64 object-cover mt-8">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Street food plating" class="rounded-tr-3xl rounded-bl-3xl shadow-lg h-64 object-cover">
+                    <img src="https://images.unsplash.com/photo-1530016555861-3d1f3f5ca94b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Food truck exterior" class="rounded-tl-3xl rounded-br-3xl shadow-lg h-64 object-cover mt-8">
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <span class="bg-brand-teal text-brand-light font-bold px-4 py-1 rounded-full text-sm inline-block">OUR STORY</span>
+                <h2 class="font-display text-4xl md:text-5xl mt-4 mb-6">CULINARY INNOVATION ON WHEELS</h2>
+                <div class="w-20 h-2 bg-brand-orange mb-6"></div>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Flavor Wheels was born in 2018 when Chef Alex Rodriguez left his position at a Michelin-starred
+                    restaurant to pursue his dream of making exceptional food more accessible to everyone.
+                </p>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Our mission is simple: combine the quality and creativity of fine dining with the fun, casual
+                    atmosphere of street food. We source locally whenever possible and change our menu seasonally to
+                    ensure the freshest ingredients and most innovative flavors.
+                </p>
+
+                <div class="flex flex-wrap gap-8 mb-8">
+                    <div class="text-center">
+                        <span class="block text-4xl font-display text-brand-orange">12K+</span>
+                        <span class="text-sm font-bold">HAPPY CUSTOMERS</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-4xl font-display text-brand-orange">35+</span>
+                        <span class="text-sm font-bold">UNIQUE RECIPES</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-4xl font-display text-brand-orange">15</span>
+                        <span class="text-sm font-bold">LOCATIONS WEEKLY</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Chef Alex" class="w-16 h-16 rounded-full object-cover border-4 border-brand-yellow">
+                    <div class="ml-4">
+                        <p class="font-bold">Chef Alex Rodriguez</p>
+                        <p class="text-sm text-gray-600">Founder & Head Chef</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16 bg-brand-teal pattern-bg text-brand-light">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-display text-4xl md:text-5xl mb-4">WHAT MAKES US SPECIAL</h2>
+            <div class="w-20 h-2 bg-brand-yellow mx-auto mb-6"></div>
+            <p class="text-xl max-w-2xl mx-auto">We're not your average food truck. Here's what sets Flavor Wheels apart
+                from the rest.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                <div class="bg-brand-yellow text-brand-dark p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8">
+                        <use href="#icon-location"></use>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl mb-4">CHANGING LOCATIONS</h3>
+                <p class="text-brand-light text-opacity-90">
+                    We move throughout the city, bringing our delicious food to different neighborhoods each day. Check
+                    our schedule to find us near you!
+                </p>
+            </div>
+
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                <div class="bg-brand-yellow text-brand-dark p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8">
+                        <use href="#icon-bookmark"></use>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl mb-4">DAILY SPECIALS</h3>
+                <p class="text-brand-light text-opacity-90">
+                    Our chefs create new specials every day, inspired by seasonal ingredients and global cuisines. No
+                    two visits are ever the same!
+                </p>
+            </div>
+
+            <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl">
+                <div class="bg-brand-yellow text-brand-dark p-4 rounded-2xl w-16 h-16 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8">
+                        <use href="#icon-calendar"></use>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl mb-4">PRIVATE EVENTS</h3>
+                <p class="text-brand-light text-opacity-90">
+                    Make your next event unforgettable by booking our food truck. Corporate gatherings, weddings,
+                    birthdays—we do it all!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Locations Section -->
+<section id="locations" class="py-20 bg-brand-light">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="bg-brand-orange text-brand-light font-bold px-4 py-1 rounded-full text-sm inline-block">FIND US</span>
+            <h2 class="font-display text-4xl md:text-5xl mt-4 mb-4">WHERE WE'LL BE THIS WEEK</h2>
+            <div class="w-20 h-2 bg-brand-teal mx-auto mb-6"></div>
+            <p class="text-xl max-w-2xl mx-auto">We're constantly on the move! Check our weekly schedule below or follow
+                us on social media for real-time updates.</p>
+        </div>
+
+        <!-- Map Section -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden mb-16">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/3 bg-brand-dark text-brand-light p-8">
+                    <h3 class="font-display text-2xl mb-6">REGULAR STOPS</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-2 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-location"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Downtown Financial District</h4>
+                                <p class="text-brand-light text-opacity-80 mb-1">Monday & Tuesday</p>
+                                <p class="text-brand-light text-opacity-80 flex items-center">
+                                    <svg class="w-4 h-4 mr-1">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                    11:00 AM - 2:30 PM
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-2 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-location"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Tech Park</h4>
+                                <p class="text-brand-light text-opacity-80 mb-1">Wednesday & Thursday</p>
+                                <p class="text-brand-light text-opacity-80 flex items-center">
+                                    <svg class="w-4 h-4 mr-1">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                    11:00 AM - 2:30 PM
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-2 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-location"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Riverside Park</h4>
+                                <p class="text-brand-light text-opacity-80 mb-1">Friday - Sunday</p>
+                                <p class="text-brand-light text-opacity-80 flex items-center">
+                                    <svg class="w-4 h-4 mr-1">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                    12:00 PM - 8:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 h-96 bg-gray-200 relative">
+                    <!-- This would be a real map in production -->
+                    <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69c07a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Map" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="location-pulse">
+                            <div class="bg-brand-orange p-2 rounded-full">
+                                <svg class="w-8 h-8 text-brand-light">
+                                    <use href="#icon-truck"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Events This Week -->
+        <div>
+            <h3 class="font-display text-3xl mb-8 text-center">SPECIAL EVENTS THIS WEEK</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Food Festival" class="w-full h-full object-cover">
+                        </div>
+                        <div class="sm:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="font-bold text-xl mb-1">Spring Food Festival</h4>
+                                    <p class="text-gray-600 flex items-center">
+                                        <svg class="w-4 h-4 mr-1">
+                                            <use href="#icon-calendar"></use>
+                                        </svg>
+                                        Saturday, March 22nd
+                                    </p>
+                                </div>
+                                <span class="bg-brand-yellow text-brand-dark text-xs font-bold px-3 py-1 rounded-full">FEATURED</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Join us at the annual Spring Food Festival where we'll be
+                                serving our most popular items plus some special festival-exclusive dishes!</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-gray-600 flex items-center">
+                                    <svg class="w-4 h-4 mr-1">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                    4:00 PM - 10:00 PM
+                                </p>
+                                <a href="https://maps.google.com" target="_blank" class="text-brand-teal hover:underline font-bold inline-flex items-center">
+                                    Directions
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-1/3">
+                            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Farmers Market" class="w-full h-full object-cover">
+                        </div>
+                        <div class="sm:w-2/3 p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="font-bold text-xl mb-1">Farmers Market</h4>
+                                    <p class="text-gray-600 flex items-center">
+                                        <svg class="w-4 h-4 mr-1">
+                                            <use href="#icon-calendar"></use>
+                                        </svg>
+                                        Sunday, March 23rd
+                                    </p>
+                                </div>
+                                <span class="bg-brand-teal text-brand-light text-xs font-bold px-3 py-1rounded-full">SPECIAL MENU</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">We'll be at the weekly farmers market with a special
+                                farm-to-truck menu featuring ingredients sourced directly from local vendors.</p>
+                            <div class="flex items-center justify-between">
+                                <p class="text-gray-600 flex items-center">
+                                    <svg class="w-4 h-4 mr-1">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                    9:00 AM - 2:00 PM
+                                </p>
+                                <a href="https://maps.google.com" target="_blank" class="text-brand-teal hover:underline font-bold inline-flex items-center">
+                                    Directions
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="bg-brand-yellow text-brand-dark font-bold px-4 py-1 rounded-full text-sm inline-block">TASTE THE EXPERIENCE</span>
+            <h2 class="font-display text-4xl md:text-5xl mt-4 mb-4">OUR DELICIOUS MENU</h2>
+            <div class="w-20 h-2 bg-brand-orange mx-auto mb-6"></div>
+            <p class="text-xl max-w-2xl mx-auto">We craft our dishes using locally-sourced ingredients and
+                globally-inspired flavors. Our menu changes seasonally, but these favorites are always available.</p>
+        </div>
+
+        <!-- Today's Specials -->
+        <div class="mb-16">
+            <h3 class="font-display text-3xl mb-8 text-center">TODAY'S SPECIALS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Korean BBQ Tacos" class="w-full h-full object-cover">
+                        </div>
+                        <div class="sm:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-brand-orange text-brand-light text-xs font-bold px-3 py-1 rounded-full">CHEF'S CHOICE</span>
+                                <div class="flex">
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">Korean BBQ Tacos</h4>
+                            <p class="text-gray-600 mb-4">Marinated beef short rib, gochujang aioli, kimchi slaw,
+                                pickled radish, cilantro, corn tortillas</p>
+                            <div class="flex justify-between items-center">
+                                <p class="font-display text-2xl text-brand-orange">$9.50</p>
+                                <span class="text-sm text-gray-500">Limited availability today!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg">
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="sm:w-2/5">
+                            <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Truffle Fries" class="w-full h-full object-cover">
+                        </div>
+                        <div class="sm:w-3/5 p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="bg-brand-teal text-brand-light text-xs font-bold px-3 py-1 rounded-full">NEW ITEM</span>
+                                <div class="flex">
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-brand-yellow">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                    <svg class="w-5 h-5 text-gray-300">
+                                        <use href="#icon-star"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="font-bold text-xl mb-2">Truffle Parmesan Fries</h4>
+                            <p class="text-gray-600 mb-4">Hand-cut russet potatoes, white truffle oil, aged parmesan,
+                                fresh herbs, roasted garlic aioli</p>
+                            <div class="flex justify-between items-center">
+                                <p class="font-display text-2xl text-brand-orange">$6.75</p>
+                                <span class="text-sm text-gray-500">Perfect for sharing!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Menu -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gourmet Burger" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Signature Burger</h4>
+                    <p class="text-gray-600 mb-4">Grass-fed beef patty, aged cheddar, caramelized onions, house sauce,
+                        arugula, brioche bun</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$12.95</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1562059390-a761a084768e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fish Tacos" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Baja Fish Tacos</h4>
+                    <p class="text-gray-600 mb-4">Beer-battered cod, lime crema, cabbage slaw, pickled onions, cilantro,
+                        corn tortillas</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$10.95</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-gray-300">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Loaded Fries" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Loaded Fries</h4>
+                    <p class="text-gray-600 mb-4">Hand-cut fries, cheese sauce, bacon, jalapeños, green onions, sour
+                        cream</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$8.95</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-gray-300">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mediterranean Bowl" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Mediterranean Bowl</h4>
+                    <p class="text-gray-600 mb-4">Falafel, quinoa tabbouleh, hummus, tzatziki, cucumber, tomato, olives,
+                        pita</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$11.95</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a3479c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Pulled Pork Sandwich" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Pulled Pork Sandwich</h4>
+                    <p class="text-gray-600 mb-4">Slow-cooked pork shoulder, homemade BBQ sauce, coleslaw, pickles,
+                        brioche bun</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$11.50</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-gray-300">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-brand-light rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Churros" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="font-bold text-xl mb-2">Churros</h4>
+                    <p class="text-gray-600 mb-4">Freshly fried churros, cinnamon sugar, chocolate dipping sauce, dulce
+                        de leche</p>
+                    <div class="flex justify-between items-center">
+                        <p class="font-display text-2xl text-brand-orange">$6.95</p>
+                        <div class="flex">
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                            <svg class="w-5 h-5 text-brand-yellow">
+                                <use href="#icon-star"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-gray-600 italic mb-6">Our menu changes seasonally. Follow us on social media for daily
+                specials!</p>
+            <a href="#" class="bg-brand-orange text-brand-light font-bold px-8 py-4 rounded-lg inline-flex items-center hover:bg-opacity-90 transition duration-300">
+                <svg class="w-5 h-5 mr-2">
+                    <use href="#icon-bookmark"></use>
+                </svg>
+                DOWNLOAD FULL MENU
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-20 bg-brand-dark">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="bg-brand-orange text-brand-light font-bold px-4 py-1 rounded-full text-sm inline-block">WHAT PEOPLE SAY</span>
+            <h2 class="font-display text-4xl md:text-5xl text-brand-light mt-4 mb-4">OUR HAPPY CUSTOMERS</h2>
+            <div class="w-20 h-2 bg-brand-yellow mx-auto mb-6"></div>
+            <p class="text-xl max-w-2xl mx-auto text-brand-light text-opacity-90">Don't just take our word for it—here's
+                what our customers have to say about their Flavor Wheels experience.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="flex mb-4">
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                </div>
+                <p class="text-gray-600 mb-8 italic">"The Korean BBQ tacos are the best I've ever had! I follow Flavor
+                    Wheels on Instagram so I never miss when they're near my office. Worth every penny!"</p>
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <p class="font-bold">Michael Reeves</p>
+                        <p class="text-gray-600 text-sm">Software Engineer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="flex mb-4">
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                </div>
+                <p class="text-gray-600 mb-8 italic">"Flavor Wheels catered our company event and it was a huge hit! The
+                    food was exceptional, service was great, and they accommodated all our dietary restrictions."</p>
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <p class="font-bold">Sarah Johnson</p>
+                        <p class="text-gray-600 text-sm">Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="flex mb-4">
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                    <svg class="w-5 h-5 text-brand-yellow">
+                        <use href="#icon-star"></use>
+                    </svg>
+                </div>
+                <p class="text-gray-600 mb-8 italic">"Their Mediterranean Bowl is incredible! As a vegetarian, I
+                    appreciate that they have so many delicious plant-based options. The flavors are always on
+                    point."</p>
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Customer" class="w-12 h-12 rounded-full object-cover mr-4">
+                    <div>
+                        <p class="font-bold">David Chen</p>
+                        <p class="text-gray-600 text-sm">Graphic Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="py-20 bg-brand-light">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+                <span class="bg-brand-teal text-brand-light font-bold px-4 py-1 rounded-full text-sm inline-block">PRIVATE EVENTS</span>
+                <h2 class="font-display text-4xl md:text-5xl mt-4 mb-4">BOOK OUR FOOD TRUCK</h2>
+                <div class="w-20 h-2 bg-brand-orange mb-6"></div>
+                <p class="text-lg mb-6">Make your next event unforgettable with Flavor Wheels! Our food truck is
+                    available for private bookings, bringing our delicious menu directly to your location.</p>
+
+                <div class="bg-white p-8 rounded-xl shadow-md mb-8">
+                    <h3 class="font-bold text-xl mb-4">PERFECT FOR:</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Corporate Events</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Weddings</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Birthday Parties</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">School Events</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Festivals</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-brand-yellow p-2 rounded-lg mr-3">
+                                <svg class="w-6 h-6 text-brand-dark">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <span class="font-medium">Private Parties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-lg mb-8">We offer customized menus tailored to your event's needs and budget. Our team
+                    will handle everything from setup to cleanup, ensuring a seamless experience.</p>
+
+                <a href="#contact" class="bg-brand-orange text-brand-light font-bold px-8 py-4 rounded-lg inline-flex items-center hover:bg-opacity-90 transition duration-300">
+                    BOOK YOUR EVENT NOW
+                </a>
+            </div>
+
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Private event catering" class="w-full h-80 object-cover rounded-tl-3xl rounded-br-3xl shadow-xl mb-8">
+                    <div class="absolute -bottom-6 -right-6 bg-brand-yellow w-16 h-16 rounded-full z-0 hidden md:block"></div>
+                </div>
+
+                <div class="bg-brand-dark text-white p-8 rounded-xl relative">
+                    <div class="absolute -top-6 -left-6 bg-brand-teal w-12 h-12 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-brand-light">
+                            <use href="#icon-star"></use>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">EVENT CLIENT TESTIMONIAL</h3>
+                    <p class="italic mb-6">"We hired Flavor Wheels for our wedding reception, and it was the highlight
+                        of the evening! Our guests are still raving about the food months later. The team was
+                        professional, the presentation was beautiful, and everything ran smoothly."</p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Event Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold">Jessica & Mark</p>
+                            <p class="text-brand-light text-opacity-80 text-sm">Wedding Clients - June 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-brand-teal pattern-bg">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="font-display text-4xl md:text-5xl text-brand-light mb-6">READY TO EXPERIENCE FLAVOR WHEELS?</h2>
+        <p class="text-brand-light text-opacity-90 text-xl max-w-2xl mx-auto mb-8">Follow us on social media for daily
+            location updates and special menu offerings, or contact us to book your private event.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#locations" class="bg-brand-yellow text-brand-dark font-bold px-8 py-4 rounded-lg hover:bg-opacity-90 transition duration-300">FIND
+                US TODAY</a>
+            <a href="#contact" class="bg-transparent border-2 border-brand-light text-brand-light font-bold px-8 py-4 rounded-lg hover:bg-brand-light hover:text-brand-dark transition duration-300">CONTACT
+                US</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="bg-brand-orange text-brand-light font-bold px-4 py-1 rounded-full text-sm inline-block">GET IN TOUCH</span>
+            <h2 class="font-display text-4xl md:text-5xl mt-4 mb-4">CONTACT US</h2>
+            <div class="w-20 h-2 bg-brand-teal mx-auto mb-6"></div>
+            <p class="text-xl max-w-2xl mx-auto">Have questions or want to book our food truck for your event? We'd love
+                to hear from you!</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-1/2">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2 font-bold">NAME</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2 font-bold">EMAIL</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 mb-2 font-bold">PHONE</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange">
+                    </div>
+                    <div>
+                        <label for="inquiry-type" class="block text-gray-700 mb-2 font-bold">INQUIRY TYPE</label>
+                        <select id="inquiry-type" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange">
+                            <option value="general">General Question</option>
+                            <option value="booking">Private Event Booking</option>
+                            <option value="catering">Catering Services</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2 font-bold">MESSAGE</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-brand-orange"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-orange hover:bg-opacity-90 text-brand-light font-bold py-4 px-6 rounded-lg transition duration-300">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+
+            <div class="md:w-1/2">
+                <div class="bg-brand-dark text-brand-light p-8 rounded-xl h-full">
+                    <h3 class="font-display text-2xl mb-8">CONTACT INFORMATION</h3>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-3 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-phone"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">PHONE</h4>
+                                <a href="tel:+15551234567" class="text-brand-light text-opacity-90 hover:text-brand-yellow transition duration-300">(555)
+                                    123-4567</a>
+                                <p class="text-brand-light text-opacity-70 text-sm mt-1">Mon-Fri from 9am to 6pm</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-3 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-truck"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">BUSINESS HOURS</h4>
+                                <p class="text-brand-light text-opacity-90">Monday - Friday: 11:00 AM - 3:00 PM</p>
+                                <p class="text-brand-light text-opacity-90">Saturday - Sunday: 12:00 PM - 8:00 PM</p>
+                                <p class="text-brand-light text-opacity-70 text-sm italic mt-1">Hours may vary by
+                                    location</p>
+                            </div>
+                        </div>
+
+                        text
+                        <div class="flex items-start">
+                            <div class="bg-brand-orange p-3 rounded-lg mr-4 mt-1">
+                                <svg class="w-6 h-6">
+                                    <use href="#icon-calendar"></use>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">BOOKING</h4>
+                                <p class="text-brand-light text-opacity-90">For event bookings, please contact us at
+                                    least 2 weeks in advance.</p>
+                                <p class="text-brand-light text-opacity-70 text-sm italic mt-1">We'll get back to you
+                                    within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-4">FOLLOW US</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-brand-light bg-opacity-20 hover:bg-brand-yellow hover:text-brand-dark p-3 rounded-lg transition duration-300">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </a>
+                                <a href="#" class="bg-brand-light bg-opacity-20 hover:bg-brand-yellow hover:text-brand-dark p-3 rounded-lg transition duration-300">
+                                    <i class="fab fa-facebook-f text-lg"></i>
+                                </a>
+                                <a href="#" class="bg-brand-light bg-opacity-20 hover:bg-brand-yellow hover:text-brand-dark p-3 rounded-lg transition duration-300">
+                                    <i class="fab fa-twitter text-lg"></i>
+                                </a>
+                                <a href="#" class="bg-brand-light bg-opacity-20 hover:bg-brand-yellow hover:text-brand-dark p-3 rounded-lg transition duration-300">
+                                    <i class="fab fa-tiktok text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-brand-dark text-brand-light pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div>
+                <a href="#" class="flex items-center mb-6">
+                    <div class="bg-brand-orange p-2 rounded-full mr-3">
+                        <svg class="w-7 h-7 text-brand-light">
+                            <use href="#icon-truck"></use>
+                        </svg>
+                    </div>
+                    <span class="font-display text-3xl tracking-wider">FLAVOR<span class="text-brand-orange">WHEELS</span></span>
+                </a>
+                <p class="text-brand-light text-opacity-80 mb-6">Gourmet street food on wheels, bringing culinary
+                    excellence to various locations throughout the city.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-brand-light text-opacity-70 hover:text-brand-yellow transition duration-300">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="#" class="text-brand-light text-opacity-70 hover:text-brand-yellow transition duration-300">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="#" class="text-brand-light text-opacity-70 hover:text-brand-yellow transition duration-300">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="#" class="text-brand-light text-opacity-70 hover:text-brand-yellow transition duration-300">
+                        <i class="fab fa-tiktok text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl mb-6">QUICK LINKS</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#about" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">About
+                            Us</a></li>
+                    <li>
+                        <a href="#locations" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Locations</a>
+                    </li>
+                    <li>
+                        <a href="#menu" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Our
+                            Menu</a></li>
+                    <li>
+                        <a href="#events" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Private
+                            Events</a></li>
+                    <li>
+                        <a href="#contact" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl mb-6">LEGAL</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Privacy
+                            Policy</a></li>
+                    <li>
+                        <a href="#" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Terms
+                            of Service</a></li>
+                    <li>
+                        <a href="#" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Catering
+                            Policy</a></li>
+                    <li>
+                        <a href="#" class="text-brand-light text-opacity-80 hover:text-brand-yellow transition duration-300">Cancellation
+                            Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-display text-xl mb-6">NEWSLETTER</h3>
+                <p class="text-brand-light text-opacity-80 mb-4">Subscribe to get special offers, menu updates, and
+                    location alerts.</p>
+                <form class="flex mb-4">
+                    <input type="email" placeholder="Your email" class="px-4 py-3 rounded-l-lg w-full focus:outline-none">
+                    <button type="submit" class="bg-brand-orange text-brand-light px-4 rounded-r-lg hover:bg-opacity-90 transition duration-300 flex items-center justify-center">
+                        SIGN UP
+                    </button>
+                </form>
+                <p class="text-brand-light text-opacity-60 text-sm">We respect your privacy. Unsubscribe at any
+                    time.</p>
+            </div>
+        </div>
+
+        <div class="border-t border-brand-light border-opacity-20 pt-8 text-center">
+            <p class="text-brand-light text-opacity-60 mb-4">© 2025 Flavor Wheels. All rights reserved.</p>
+            <p class="text-brand-light text-opacity-60">Website designed with ♥ by DV Team</p>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/15551234567" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300 z-40 flex items-center justify-center">
+    <svg class="w-6 h-6">
+        <use href="#icon-whatsapp"></use>
+    </svg>
+</a>
+
+<!-- Go Up Button -->
+<button id="go-up-btn" class="fixed bottom-6 left-6 bg-brand-orange hover:bg-opacity-90 text-brand-light p-4 rounded-full shadow-lg transition duration-300 z-40 hidden flex items-center justify-center">
+    <svg class="w-6 h-6">
+        <use href="#icon-arrow-up"></use>
+    </svg>
+</button>
+
+<!-- Font Awesome for social icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- JavaScript -->
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close mobile menu when clicking a link
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Go up button functionality
+    const goUpBtn = document.getElementById('go-up-btn');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            goUpBtn.classList.remove('hidden');
+            goUpBtn.classList.add('flex');
+        } else {
+            goUpBtn.classList.add('hidden');
+            goUpBtn.classList.remove('flex');
+        }
+    });
+
+    goUpBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const inquiryType = document.getElementById('inquiry-type').value;
+        const message = document.getElementById('message').value;
+
+        // Simple validation
+        if (!name || !email || !message) {
+            alert('Please fill in all required fields');
+            return;
+        }
+
+        // In a real implementation, you would send this data to a server
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-lg');
+        } else {
+            header.classList.remove('shadow-lg');
+        }
+    });
+</script>
+</body>
+</html>
